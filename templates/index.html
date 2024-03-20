@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Selector and Live Stream</title>
+    <style>
+        body {
+            background-image: url("static/bg.jpg");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        nav {
+            background-color: #1f2a44; /* Dark blue background color */
+            color: white; /* Text color */
+            padding: 10px 0; /* Padding top and bottom */
+            font-size: 20px; /* Font size */
+        }
+        nav h1 {
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+            font-size: 24px; /* Larger font size for the heading */
+        }
+        #video-container {
+            display: inline-block;
+            margin-top: 50px; /* Adjust the margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Make Every Breath a Beauty</h1>
+    </nav>
+    <h1>Yoga Pose Estimator Using Computer Vision</h1>
+    <form action="/select_image" method="post" enctype="multipart/form-data">
+        <label for="image">Choose a file:</label><br>
+        <input type="file" id="image" name="image"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h2>Live Stream:</h2>
+    <div id="video-container">
+        <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    </div>
+</body>
+</html>
