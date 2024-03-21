@@ -18,11 +18,23 @@
             color: white; /* Text color */
             padding: 10px 0; /* Padding top and bottom */
             font-size: 20px; /* Font size */
+            display: flex;
+            justify-content: space-between; /* Align items horizontally */
+            align-items: center; /* Align items vertically */
         }
         nav h1 {
             margin: 0; /* Remove margin */
             padding: 0; /* Remove padding */
             font-size: 24px; /* Larger font size for the heading */
+        }
+        #tutorial-btn {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        #tutorial-btn:hover {
+            background-color: #45608d; /* Darker blue on hover */
+            border-radius: 5px;
         }
         #video-container {
             display: inline-block;
@@ -33,6 +45,7 @@
 <body>
     <nav>
         <h1>Make Every Breath a Beauty</h1>
+        <a id="tutorial-btn" href="/tutorial">Tutorial</a>
     </nav>
     <h1>Yoga Pose Estimator Using Computer Vision</h1>
     <form action="/select_image" method="post" enctype="multipart/form-data">

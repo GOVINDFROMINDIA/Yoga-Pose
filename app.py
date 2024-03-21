@@ -36,5 +36,10 @@ def select_image():
 def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+# Replace the existing route for tutorial
+@app.route('/tutorial')
+def tutorial():
+    return render_template('tutorial.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
